@@ -1,0 +1,49 @@
+# This section configures the server settings.
+server:
+  port: 8081
+  # The port number where this service will run (http://localhost:8081).
+  servlet:
+    # The context path defines the base URL for your service.
+    # Example: http://localhost:8081/address-service
+    context-path: /address-service
+
+spring:
+  application:
+    # This is the name of your application.
+    # It is used by Spring Cloud and can help in service discovery.
+    name: address-service
+
+  datasource:
+    # This is the connection string (JDBC URL) to your MySQL database.
+    # It includes:
+    # - Host: mysql-3e656638-kuldeep019236-9fcb.g.aivencloud.com
+    # - Port: 11223
+    # - Database: springbootmicroservicesdemo
+    # - Options: createDatabaseIfNotExist=true (creates DB if missing), ssl-mode=REQUIRED (forces secure connection)
+    url: jdbc:mysql://username:password@mysql-3e656638-kuldeep019236-9fcb.g.aivencloud.com:11223/springbootmicroservicesdemo?createDatabaseIfNotExist=true&ssl-mode=REQUIRED
+    
+    # Database username for authentication
+    username: username
+    
+    # Database password for authentication
+    password: password
+    
+    # Driver class for MySQL (needed by Spring to connect properly)
+    driverClassName: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    # Show SQL queries in the console/logs (useful for debugging).
+    show-sql: true
+    
+    hibernate:
+      # ddl-auto defines how Hibernate manages database schema:
+      # - update: Automatically updates schema when entity changes
+      # - create: Creates schema every time (dangerous, wipes data)
+      # - validate: Validates schema but doesn’t change it
+      # - none: Does nothing
+      ddl-auto: update
+
+    properties:
+      hibernate:
+        # Formats SQL queries in logs for better readability.
+        format_sql: true
