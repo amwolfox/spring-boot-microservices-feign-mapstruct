@@ -18,16 +18,16 @@ spring:
     # - Port: 11223
     # - Database: springbootmicroservicesdemo
     # - Options: createDatabaseIfNotExist=true (creates DB if missing), ssl-mode=REQUIRED (forces secure connection)
-    url: jdbc:mysql://username:password@mysql-3e656638-kuldeep019236-9fcb.g.aivencloud.com:11223/springbootmicroservicesdemo?createDatabaseIfNotExist=true&ssl-mode=REQUIRED
+    url: jdbc:postgresql://localhost:5432/springbootmicroservicesdemo
     
     # Database username for authentication
-    username: username
+    username: mesut
     
     # Database password for authentication
-    password: password
+    password:
     
     # Driver class for MySQL (needed by Spring to connect properly)
-    driverClassName: com.mysql.cj.jdbc.Driver
+    driverClassName: org.postgresql.Driver
 
   jpa:
     # Show SQL queries in the console/logs (useful for debugging).
