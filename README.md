@@ -1,3 +1,6 @@
+This project is taken from https://github.com/harman-04/spring-boot-microservices-feign-mapstruct.
+I have cloned it for my learning purpose.
+
 
 #  Spring Boot: Declarative Microservices & Automated Mapping
 
